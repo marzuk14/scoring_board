@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Scoring Board</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+	
+        <h1>Basketball Scoring Board</h1>
+    </header>
+    <main>
+	<button id="back-button" onclick="goBack()">Kembali</button>
+        <div class="quarter-container">
+            <div class="quarter">
+                <span>Quarter:</span>
+                <input type="number" id="quarter" min="1" max="4" value="1">
+            </div>
+            <div class="shot-clock-container">
+                <div id="shot-clock">12</div>
+                <button id="start-shot-clock" onclick="startShotClock()">Start Shot Clock</button>
+				<button id="pause-shot-clock" onclick="pauseShotClock()">Pause Shot Clock</button>
+                <button id="reset-shot-clock" onclick="resetShotClock()">Reset Shot Clock</button>
+            </div>
+        </div>
+        <div class="team-container">
+            <div class="team" id="team1">
+                <h2 id="team1-display">Team 1</h2>
+                <div class="score" id="score1">0</div>
+                <button id="team1-score-increase" onclick="changeScore('score1', 1)">+1</button>
+                <button id="team1-score-decrease" onclick="changeScore('score1', -1)">-1</button>
+                <div class="foul">
+                    <span>Fouls: </span>
+                    <div id="foul1">0</div>
+                    <button id="team1-foul-increase" onclick="changeFoul('foul1', 1)">+1</button>
+                    <button id="team1-foul-decrease" onclick="changeFoul('foul1', -1)">-1</button>
+                </div>
+            </div>
+            <div class="team" id="team2">
+                <h2 id="team2-display">Team 2</h2>
+                <div class="score" id="score2">0</div>
+                <button id="team2-score-increase" onclick="changeScore('score2', 1)">+1</button>
+                <button id="team2-score-decrease" onclick="changeScore('score2', -1)">-1</button>
+                <div class="foul">
+                    <span>Fouls: </span>
+                    <div id="foul2">0</div>
+                    <button id="team2-foul-increase" onclick="changeFoul('foul2', 1)">+1</button>
+                    <button id="team2-foul-decrease" onclick="changeFoul('foul2', -1)">-1</button>
+                </div>
+            </div>
+			<div class="controls">
+				<div id="timer">00:00</div>
+				<button id="start-timer" onclick="startTimer()">Start Timer</button>
+				<button id="pause-timer" onclick="pauseTimer()">Pause Timer</button>
+				<button id="reset-timer" onclick="resetTimer()">Reset Timer</button>
+			</div>
+		
+        </div>
+        
+    </main>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
